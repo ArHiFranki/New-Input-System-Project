@@ -9,7 +9,7 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "c745e378-e4dc-4cec-b1fd-a7a154dc008f",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
@@ -20,22 +20,30 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "6e9c2a3d-f70c-4cce-a218-b17fda281d17",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "bd6d90c5-bb9e-444a-aaf9-59ff0f81d612",
-                    "path": "",
+                    "id": "38355533-fb39-4ec8-8a1d-f4d0909c116a",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "2D Vector Keyboard",
                     "id": "1a2648d0-6a28-4c4f-92ec-eb103f39bd8e",
                     "path": "2DVector",
                     "interactions": "",
@@ -90,7 +98,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "2D Vector",
+                    "name": "2D Vector Gamepad",
                     "id": "801e370e-9b33-468d-bdd3-c6836e019609",
                     "path": "2DVector",
                     "interactions": "",
@@ -240,6 +248,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c9f3fb2-f486-4e51-bbde-a9dd2f7b4697",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8448d525-6e31-4fb6-a581-b87c0e3e3aef",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
