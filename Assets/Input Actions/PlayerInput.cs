@@ -256,7 +256,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""52c6b06a-c3d3-4208-b252-90c4d79f18d0"",
                     ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": ""MultiTap"",
+                    ""interactions"": ""MultiTap,Simple"",
                     ""processors"": """",
                     ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Click"",
