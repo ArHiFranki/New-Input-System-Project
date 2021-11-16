@@ -9,38 +9,48 @@ public class Player : MonoBehaviour
 
     private PlayerInput _input;
     private Vector2 _direction;
+    private Vector2 _inputRotate;
     private Vector2 _rotation;
 
     private void Awake()
     {
         _input = new PlayerInput();
+    }
+
+    private void OnEnable()
+    {
         _input.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _input.Disable();
     }
 
     private void Update()
     {
-        _rotation = _input.Player.Look.ReadValue<Vector2>();
+        _inputRotate = _input.Player.Look.ReadValue<Vector2>();
         _direction = _input.Player.Move.ReadValue<Vector2>();
         
-        Look(_rotation);
+        Look(_inputRotate);
         Move(_direction);
     }
 
     private void Move(Vector2 direction)
     {
-        if (direction.sqrMagnitude < 0.1f)
+        if (direction.sqrMagnitude < 0.1)
         {
             return;
         }
 
         float scaledMoveSpeed = _moveSpeed * Time.deltaTime;
-        Vector3 move = Quaternion.Euler(0, transform.eulerAngles.y, 0) * new Vector3(direction.x, direction.y);
+        Vector3 move = Quaternion.Euler(0, transform.eulerAngles.y, 0) * new Vector3(direction.x, 0, direction.y);
         transform.position += move * scaledMoveSpeed;
     }
 
     private void Look(Vector2 rotate)
     {
-        if (rotate.sqrMagnitude < 0.1f)
+        if (rotate.sqrMagnitude < 0.1)
         {
             return;
         }
